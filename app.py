@@ -22,6 +22,10 @@ with open('scaler.pkl', 'rb') as file:
 ## streamlit app
 st.title('Customer Churn Prediction')
 
+st.markdown("""
+            **Customer Churn** refers to when a customer stops using a company's product or service.  By analyzing historical data like customer behavior, usage patterns, and interactions, we forecast churn. If the churn probabilty is more than 0.5 than we can say that customer is likely to churn otherwise not.
+            """)
+
 # User input
 geography = st.selectbox('Geography', onehot_encoder_geo.categories_[0])
 gender = st.selectbox('Gender', label_encoder_gender.classes_)
